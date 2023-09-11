@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { toRef, computed } from "vue";
 
-import { Utils } from "../libs/Utils";
-const u: any = new Utils();
+//import { Utils } from "../libs/Utils";
+//const u: any = new Utils();
 
 const emit = defineEmits(["action"]);
 
@@ -26,7 +26,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 //toRef
-const data = toRef(props, "data");
+//const data = toRef(props, "data");
 const top = toRef(props, "top");
 const left = toRef(props, "left");
 const toggle = toRef(props, "toggle");

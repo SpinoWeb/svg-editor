@@ -684,6 +684,17 @@ const runScript = (payload: any) => {
 </script>
 
 <template>
+  <button class="btn btn-primary">One</button>
+  <button class="btn btn-secondary">Two</button>
+  <button class="btn btn-accent btn-outline">Three</button>
+
+  <div class="grid grid-cols-2 gap-4">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+  </div>
+
   <v-container
     id="container"
     fluid

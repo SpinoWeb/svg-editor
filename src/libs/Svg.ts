@@ -188,7 +188,7 @@ class SvgJs {
       _settings[key] = settings[key];
     }
 
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve) => {
       let svgNode;
 
       // Create SVG Node if a plain string has been provided

@@ -106,7 +106,7 @@ class IO {
     const a = document.createElement("a");
     a.download = fileName + extension;
     a.href = URL.createObjectURL(blob);
-    a.addEventListener("click", (e) => {
+    a.addEventListener("click", () => {
       setTimeout(() => URL.revokeObjectURL(a.href), 30 * 1000);
     });
     a.click();
@@ -120,7 +120,14 @@ class IO {
     PrimaryTable: string,
     Tables: any = []
   ) => {
-    //console.log("IO > GroupData", data, LocalTableName, PrimaryKey, PrimaryTable, Tables);
+    console.log(
+      "IO > GroupData",
+      data,
+      LocalTableName,
+      PrimaryKey,
+      PrimaryTable,
+      Tables
+    );
 
     // array che conterrà, per ciascuna Key, un singolo record
     // con tutte le properties

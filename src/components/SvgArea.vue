@@ -115,21 +115,6 @@ const polygons = computed(() => {
 });
 
 // methods
-const onAction = (obj: any) => {
-  //console.log("SvgArea > onAction", obj);
-  emit("action", obj);
-};
-
-const onClick = (obj: any) => {
-  //console.log("SvgArea > onClick", obj);
-  emit("click", obj);
-};
-
-const onPointer = (obj: any) => {
-  //console.log("SvgArea > onPointer", obj);
-  emit("pointer", obj);
-};
-
 // click
 const onSvgClick = (event: any) => {
   //console.log("SvgArea > onSvgClick", event);
@@ -186,7 +171,7 @@ const handleWheel = (event: WheelEvent) => {
   //console.log("SvgArea > handleWheel", event);
   //event.preventDefault();
 
-  const { clientX, clientY, deltaX, deltaY, ctrlKey } = event;
+  const { deltaY, ctrlKey } = event;
   //console.log("SvgArea > handleWheel", { clientX, clientY, deltaX, deltaY, ctrlKey });
 
   if (ctrlKey) {
@@ -205,17 +190,6 @@ const handleWheel = (event: WheelEvent) => {
 
     //console.log("SvgArea > handleWheel > camera", data.value.camera);
   }
-};
-
-// panel
-const SvgPanelEvent = (obj: any) => {
-  //console.log("SvgArea > SvgPanelEvent", obj);
-
-  // if panel/element is pointed then svg is stopped
-  if (obj.event.type == "pointerdown" || obj.event.type == "EditorPointerDown")
-    removeEventListenerToSvg();
-  if (obj.event.type == "pointerup" || obj.event.type == "EditorPointerUp")
-    addEventListenerToSvg();
 };
 
 // svg events List
